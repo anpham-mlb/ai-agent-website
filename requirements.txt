@@ -1,2 +1,5 @@
 flask
 openai
+pandas
+scikit-learn
+numpy
