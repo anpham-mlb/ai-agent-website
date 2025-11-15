@@ -1,27 +1,24 @@
-from flask import Flask, render_template, request, jsonify
-from openai import OpenAI
 import os
+from flask import Flask, request, render_template
+from openai import OpenAI
 
 app = Flask(__name__)
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-@app.route("/")
+PORT = int(os.environ.get("PORT", 5000))  # default 5000 locally
+
+@app.route("/", methods=["GET", "POST"])
 def home():
-    return render_template("index.html")
-
-@app.route("/ask", methods=["POST"])
-def ask():
-    user_prompt = request.json.get("prompt")
-
-    response = client.chat.completions.create(
-        model="gpt-5-nano",  
-        messages=[
-            {"role": "user", "content": user_prompt}
-        ]
-    )
-
-    answer = response.choices[0].message.content
-    return jsonify({"answer": answer})
+    if request.method == "POST":
+        prompt = request.form.get("prompt")
+        # Example OpenAI call (adjust as needed)
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        answer = response.choices[0].message.content
+        return render_template("index.html", answer=answer)
+    return render_template("index.html", answer=None)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=PORT)
