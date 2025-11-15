@@ -1,36 +1,31 @@
 import os
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
 
 app = Flask(__name__)
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-PORT = int(os.environ.get("PORT", 5000))  # default 5000 locally
+@app.route("/")
+def index():
+    return render_template("index.html")  # Serve the HTML page
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-    if request.method == "POST":
-        prompt = request.form.get("prompt")
-        print(f"Received prompt: {prompt}")  # Logs to Render
+@app.route("/ask", methods=["POST"])
+def ask():
+    data = request.get_json()
+    prompt = data.get("prompt", "")
 
-        try:
-            import os
-            from openai import OpenAI
+    if not prompt:
+        return jsonify({"error": "Prompt is empty"}), 400
 
-            client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
-            print("API key loaded")  # Logs to Render
-
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{"role": "user", "content": prompt}]
-            )
-            answer = response.choices[0].message.content
-        except Exception as e:
-            answer = f"Error: {e}"
-            print(f"Error: {e}")  # Logs the error
-
-        return render_template("index.html", answer=answer)
-    return render_template("index.html", answer=None)
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4.1-mini",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        answer = response.choices[0].message.content
+        return jsonify({"answer": answer})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=PORT)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
