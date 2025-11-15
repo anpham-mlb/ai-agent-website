@@ -1,0 +1,165 @@
+﻿AssetID,Asset,Month,Team,Hours
+AR,Ardandra,Jul-25,Construction & Engineering,13.5
+AR,Ardandra,Jul-25,Development,45
+AR,Ardandra,Jul-25,Energy Market & Analytics,171
+AR,Ardandra,Jul-25,Finance,9.9
+AR,Ardandra,Jul-25,Grid,115.875
+AR,Ardandra,Jul-25,Investment,56.25
+BC,Blind Creek,Jul-25,Construction & Engineering,354.75
+BC,Blind Creek,Jul-25,Development,183.75
+BC,Blind Creek,Jul-25,Energy Market & Analytics,129
+BC,Blind Creek,Jul-25,Finance,6
+BC,Blind Creek,Jul-25,Grid,51.75
+BC,Blind Creek,Jul-25,Investment,139.8
+BC,Blind Creek,Jul-25,Legal & Commercial,46.185
+BS,Blackstone,Jul-25,Construction & Engineering,62.5
+BS,Blackstone,Jul-25,Development,495
+BS,Blackstone,Jul-25,Energy Market & Analytics,10
+BS,Blackstone,Jul-25,Finance,5.75
+BS,Blackstone,Jul-25,Grid,76.25
+BS,Blackstone,Jul-25,Investment,25
+BS,Blackstone,Jul-25,Legal & Commercial,80.5
+CO,Coleambally,Jul-25,Construction & Engineering,61.75
+CO,Coleambally,Jul-25,Grid,119.51
+DL,Dulacca,Jul-25,Construction & Engineering,415.8
+DL,Dulacca,Jul-25,Development,445.5
+DL,Dulacca,Jul-25,Finance,74.25
+DL,Dulacca,Jul-25,Grid,37.125
+DP,Darlington Point,Jul-25,Asset Management,155
+DP,Darlington Point,Jul-25,Construction & Engineering,62
+DP,Darlington Point,Jul-25,Development,31
+DP,Darlington Point,Jul-25,Energy Market & Analytics,62
+DP,Darlington Point,Jul-25,Finance,38.75
+DP,Darlington Point,Jul-25,Grid,383.625
+FH,Fulham,Jul-25,Construction & Engineering,120.75
+FH,Fulham,Jul-25,Development,140
+FH,Fulham,Jul-25,Finance,14
+FH,Fulham,Jul-25,Grid,175
+FH,Fulham,Jul-25,Legal & Commercial,186.725
+GF,Giffard,Jul-25,Finance,15
+MR,Merino,Jul-25,Development,170
+MR,Merino,Jul-25,Grid,17.85
+SA,Saltbush,Jul-25,Energy Market & Analytics,19.5
+SA,Saltbush,Jul-25,Finance,13.65
+TH,Theodore,Jul-25,Finance,11.55
+AR,Ardandra,Aug-25,Construction & Engineering,4.5
+AR,Ardandra,Aug-25,Energy Market & Analytics,9
+AR,Ardandra,Aug-25,Finance,0.9
+AR,Ardandra,Aug-25,Grid,101.925
+AR,Ardandra,Aug-25,Investment,4.5
+AR,Ardandra,Aug-25,Legal & Commercial,6.03
+BC,Blind Creek,Aug-25,Construction & Engineering,427.245
+BC,Blind Creek,Aug-25,Development,190.5
+BC,Blind Creek,Aug-25,Energy Market & Analytics,189
+BC,Blind Creek,Aug-25,Finance,22.5
+BC,Blind Creek,Aug-25,Grid,36.375
+BC,Blind Creek,Aug-25,Investment,220.5
+BC,Blind Creek,Aug-25,Legal & Commercial,149.73
+BS,Blackstone,Aug-25,Construction & Engineering,7.5
+BS,Blackstone,Aug-25,Development,392.5
+BS,Blackstone,Aug-25,Energy Market & Analytics,10
+BS,Blackstone,Aug-25,Finance,0.5
+BS,Blackstone,Aug-25,Grid,84.2
+BS,Blackstone,Aug-25,Investment,22.5
+BS,Blackstone,Aug-25,Legal & Commercial,129.875
+CO,Coleambally,Aug-25,Construction & Engineering,147.25
+CO,Coleambally,Aug-25,Energy Market & Analytics,38
+CO,Coleambally,Aug-25,Grid,238.26
+CO,Coleambally,Aug-25,Legal & Commercial,42.18
+DL,Dulacca,Aug-25,Construction & Engineering,145.2
+DL,Dulacca,Aug-25,Finance,66
+DL,Dulacca,Aug-25,Grid,38.115
+DL,Dulacca,Aug-25,Legal & Commercial,155.595
+DP,Darlington Point,Aug-25,Asset Management,217
+DP,Darlington Point,Aug-25,Construction & Engineering,85.25
+DP,Darlington Point,Aug-25,Energy Market & Analytics,108.5
+DP,Darlington Point,Aug-25,Finance,46.5
+DP,Darlington Point,Aug-25,Grid,209.25
+FH,Fulham,Aug-25,Construction & Engineering,17.5
+FH,Fulham,Aug-25,Energy Market & Analytics,21
+FH,Fulham,Aug-25,Finance,14
+FH,Fulham,Aug-25,Grid,201.25
+FH,Fulham,Aug-25,Legal & Commercial,10.255
+SA,Saltbush,Aug-25,Finance,0.65
+TH,Theodore,Aug-25,Finance,0.55
+AR,Ardandra,Sep-25,Energy Market & Analytics,31.5
+AR,Ardandra,Sep-25,Finance,0.9
+AR,Ardandra,Sep-25,Grid,61.875
+AR,Ardandra,Sep-25,Investment,4.5
+BC,Blind Creek,Sep-25,Construction & Engineering,369.75
+BC,Blind Creek,Sep-25,Development,254.25
+BC,Blind Creek,Sep-25,Energy Market & Analytics,274.5
+BC,Blind Creek,Sep-25,Finance,15
+BC,Blind Creek,Sep-25,Grid,28.125
+BC,Blind Creek,Sep-25,Investment,310.5
+BC,Blind Creek,Sep-25,Leadership,138.75
+BC,Blind Creek,Sep-25,Legal & Commercial,208.65
+BS,Blackstone,Sep-25,Construction & Engineering,23.75
+BS,Blackstone,Sep-25,Development,420
+BS,Blackstone,Sep-25,Energy Market & Analytics,30
+BS,Blackstone,Sep-25,Finance,0.5
+BS,Blackstone,Sep-25,Grid,109.375
+BS,Blackstone,Sep-25,Investment,12.5
+BS,Blackstone,Sep-25,Leadership,22.5
+BS,Blackstone,Sep-25,Legal & Commercial,47.5
+CO,Coleambally,Sep-25,Construction & Engineering,128.25
+CO,Coleambally,Sep-25,Grid,128.25
+CO,Coleambally,Sep-25,Legal & Commercial,63.65
+DL,Dulacca,Sep-25,Construction & Engineering,24.75
+DL,Dulacca,Sep-25,Finance,66
+DL,Dulacca,Sep-25,Grid,37.125
+DL,Dulacca,Sep-25,Leadership,33
+DP,Darlington Point,Sep-25,Asset Management,155
+DP,Darlington Point,Sep-25,Construction & Engineering,7.75
+DP,Darlington Point,Sep-25,Finance,62
+DP,Darlington Point,Sep-25,Grid,317.75
+FH,Fulham,Sep-25,Construction & Engineering,52.5
+FH,Fulham,Sep-25,Development,112
+FH,Fulham,Sep-25,Energy Market & Analytics,24.5
+FH,Fulham,Sep-25,Finance,14
+FH,Fulham,Sep-25,Grid,187.25
+FH,Fulham,Sep-25,Leadership,14
+FH,Fulham,Sep-25,Legal & Commercial,17.5
+SA,Saltbush,Sep-25,Finance,0.65
+TH,Theodore,Sep-25,Finance,0.55
+AR,Ardandra,Oct-25,Development,279
+AR,Ardandra,Oct-25,Energy Market & Analytics,126
+AR,Ardandra,Oct-25,Finance,0.45
+AR,Ardandra,Oct-25,Grid,106.875
+BC,Blind Creek,Oct-25,Construction & Engineering,411.15
+BC,Blind Creek,Oct-25,Development,322.5
+BC,Blind Creek,Oct-25,Energy Market & Analytics,315
+BC,Blind Creek,Oct-25,Finance,30
+BC,Blind Creek,Oct-25,Grid,95.88
+BC,Blind Creek,Oct-25,Investment,325.5
+BC,Blind Creek,Oct-25,Leadership,19.5
+BC,Blind Creek,Oct-25,Legal & Commercial,260.85
+BS,Blackstone,Oct-25,Construction & Engineering,50
+BS,Blackstone,Oct-25,Development,400
+BS,Blackstone,Oct-25,Energy Market & Analytics,117.5
+BS,Blackstone,Oct-25,Finance,0.25
+BS,Blackstone,Oct-25,Grid,91.45
+BS,Blackstone,Oct-25,Investment,22.5
+BS,Blackstone,Oct-25,Leadership,2.5
+BS,Blackstone,Oct-25,Legal & Commercial,3.75
+CO,Coleambally,Oct-25,Construction & Engineering,71.25
+CO,Coleambally,Oct-25,Development,28.5
+CO,Coleambally,Oct-25,Grid,19
+CO,Coleambally,Oct-25,Legal & Commercial,19
+DL,Dulacca,Oct-25,Construction & Engineering,28.05
+DL,Dulacca,Oct-25,Development,363
+DL,Dulacca,Oct-25,Energy Market & Analytics,16.5
+DL,Dulacca,Oct-25,Finance,66
+DL,Dulacca,Oct-25,Grid,157.245
+DP,Darlington Point,Oct-25,Asset Management,31
+DP,Darlington Point,Oct-25,Energy Market & Analytics,15.5
+DP,Darlington Point,Oct-25,Finance,46.5
+DP,Darlington Point,Oct-25,Grid,317.75
+FH,Fulham,Oct-25,Construction & Engineering,77
+FH,Fulham,Oct-25,Development,189
+FH,Fulham,Oct-25,Finance,10.5
+FH,Fulham,Oct-25,Grid,220.5
+FH,Fulham,Oct-25,Leadership,3.5
+SA,Saltbush,Oct-25,Development,65
+SA,Saltbush,Oct-25,Finance,0.65
+TH,Theodore,Oct-25,Finance,0.55

@@ -1,0 +1,170 @@
+﻿AssetID,Asset,Month,Phase,Budget,Rate
+AR,Ardandra,Jul-25,Development,375000,103
+AR,Ardandra,Aug-25,Development,375000,103
+AR,Ardandra,Sep-25,Development,375000,103
+AR,Ardandra,Oct-25,Development,375000,103
+AR,Ardandra,Nov-25,Development,375000,103
+AR,Ardandra,Dec-25,Development,375000,103
+AR,Ardandra,Jan-26,Development,375000,103
+AR,Ardandra,Feb-26,Development,375000,103
+AR,Ardandra,Mar-26,Development,375000,103
+AR,Ardandra,Apr-26,Development,375000,103
+AR,Ardandra,May-26,Development,375000,103
+AR,Ardandra,Jun-26,Development,375000,103
+BS,Blackstone,Jul-25,Development,524722,103
+BS,Blackstone,Aug-25,Development,524722,103
+BS,Blackstone,Sep-25,Development,524722,103
+BS,Blackstone,Oct-25,Development,524722,103
+BS,Blackstone,Nov-25,Development,524722,103
+BS,Blackstone,Dec-25,Development,524722,103
+BS,Blackstone,Jan-26,Development,524722,103
+BS,Blackstone,Feb-26,Development,524722,103
+BS,Blackstone,Mar-26,Development,524722,103
+BS,Blackstone,Apr-26,Construction,175000,103
+BS,Blackstone,May-26,Construction,175000,103
+BS,Blackstone,Jun-26,Construction,175000,103
+BC,Blind Creek,Jul-25,Development,2280000,103
+BC,Blind Creek,Aug-25,Development,690000,103
+BC,Blind Creek,Sep-25,Development,585000,103
+BC,Blind Creek,Oct-25,Construction,166818,103
+BC,Blind Creek,Nov-25,Construction,166818,103
+BC,Blind Creek,Dec-25,Construction,166818,103
+BC,Blind Creek,Jan-26,Construction,166818,103
+BC,Blind Creek,Feb-26,Construction,166818,103
+BC,Blind Creek,Mar-26,Construction,166818,103
+BC,Blind Creek,Apr-26,Construction,166818,103
+BC,Blind Creek,May-26,Construction,166818,103
+BC,Blind Creek,Jun-26,Construction,166818,103
+CO,Coleambally,Aug-25,Development,1727273,103
+CO,Coleambally,Sep-25,Development,1727273,103
+CO,Coleambally,Oct-25,Development,1727273,103
+CO,Coleambally,Nov-25,Development,1727273,103
+CO,Coleambally,Dec-25,Development,1727273,103
+CO,Coleambally,Jan-26,Development,1727273,103
+CO,Coleambally,Feb-26,Development,1727273,103
+CO,Coleambally,Mar-26,Development,1727273,103
+CO,Coleambally,Apr-26,Development,1727273,103
+CO,Coleambally,May-26,Development,1727273,103
+CO,Coleambally,Jun-26,Development,1727273,103
+DP,Darlington Point,Jul-25,Operation,646561,103
+DP,Darlington Point,Aug-25,Operation,646561,103
+DP,Darlington Point,Sep-25,Operation,646561,103
+DP,Darlington Point,Oct-25,Operation,646561,103
+DP,Darlington Point,Nov-25,Operation,646561,103
+DP,Darlington Point,Dec-25,Operation,646561,103
+DP,Darlington Point,Jan-26,Operation,646561,103
+DP,Darlington Point,Feb-26,Operation,646561,103
+DP,Darlington Point,Mar-26,Operation,646561,103
+DP,Darlington Point,Apr-26,Operation,646561,103
+DP,Darlington Point,May-26,Operation,646561,103
+DP,Darlington Point,Jun-26,Operation,646561,103
+DL,Dulacca,Jul-25,Operation,401500,103
+DL,Dulacca,Aug-25,Operation,401500,103
+DL,Dulacca,Sep-25,Operation,401500,103
+DL,Dulacca,Oct-25,Operation,401500,103
+DL,Dulacca,Nov-25,Operation,401500,103
+DL,Dulacca,Dec-25,Operation,401500,103
+DL,Dulacca,Jan-26,Operation,401500,103
+DL,Dulacca,Feb-26,Operation,401500,103
+DL,Dulacca,Mar-26,Operation,401500,103
+DL,Dulacca,Apr-26,Operation,401500,103
+DL,Dulacca,May-26,Operation,401500,103
+DL,Dulacca,Jun-26,Operation,401500,103
+FH,Fulham,Jul-25,Construction,311347,103
+FH,Fulham,Aug-25,Construction,311347,103
+FH,Fulham,Sep-25,Construction,311347,103
+FH,Fulham,Oct-25,Construction,311347,103
+FH,Fulham,Nov-25,Construction,311347,103
+FH,Fulham,Dec-25,Construction,311347,103
+FH,Fulham,Jan-26,Construction,311347,103
+FH,Fulham,Feb-26,Construction,311347,103
+FH,Fulham,Mar-26,Construction,311347,103
+FH,Fulham,Apr-26,Construction,311347,103
+FH,Fulham,May-26,Construction,311347,103
+FH,Fulham,Jun-26,Construction,311347,103
+GF,Giffard,Jul-25,Development,24045.2,103
+GF,Giffard,Aug-25,Development,24045.2,103
+GF,Giffard,Sep-25,Development,24045.2,103
+GF,Giffard,Oct-25,Development,24045.2,103
+GF,Giffard,Nov-25,Development,24045.2,103
+GF,Giffard,Dec-25,Development,24045.2,103
+GF,Giffard,Jan-26,Development,24045.2,103
+GF,Giffard,Feb-26,Development,24045.2,103
+GF,Giffard,Mar-26,Development,24045.2,103
+GF,Giffard,Apr-26,Development,24045.2,103
+GF,Giffard,May-26,Development,24045.2,103
+GF,Giffard,Jun-26,Development,24045.2,103
+LG,Lake George,Nov-25,Development,975000,103
+LG,Lake George,Dec-25,Development,975000,103
+LG,Lake George,Jan-26,Development,975000,103
+LG,Lake George,Feb-26,Development,975000,103
+LG,Lake George,Mar-26,Development,975000,103
+LG,Lake George,Apr-26,Development,975000,103
+LG,Lake George,May-26,Development,975000,103
+LG,Lake George,Jun-26,Development,975000,103
+MR,Merino,Jul-25,Development,8500,103
+MR,Merino,Aug-25,Development,8500,103
+MR,Merino,Sep-25,Development,8500,103
+MR,Merino,Oct-25,Development,8500,103
+MR,Merino,Nov-25,Development,8500,103
+MR,Merino,Dec-25,Development,8500,103
+MR,Merino,Jan-26,Development,8500,103
+MR,Merino,Feb-26,Development,8500,103
+MR,Merino,Mar-26,Development,8500,103
+MR,Merino,Apr-26,Development,8500,103
+MR,Merino,May-26,Development,8500,103
+MR,Merino,Jun-26,Development,8500,103
+MW,Milli WF,Oct-25,Development,345000,103
+MW,Milli WF,Nov-25,Development,345000,103
+MW,Milli WF,Dec-25,Development,345000,103
+MW,Milli WF,Jan-26,Development,345000,103
+MW,Milli WF,Feb-26,Development,345000,103
+MW,Milli WF,Mar-26,Development,345000,103
+MW,Milli WF,Apr-26,Development,345000,103
+MW,Milli WF,May-26,Development,345000,103
+MW,Milli WF,Jun-26,Development,345000,103
+NB3,NSW BESS 3,Jan-26,Development,1350000,103
+NB4,NSW BESS 4,Feb-26,Development,1350000,103
+NB5,NSW BESS 5,Mar-26,Development,1350000,103
+NB6,NSW BESS 6,Apr-26,Development,1350000,103
+NB7,NSW BESS 7,May-26,Development,1350000,103
+NB8,NSW BESS 8,Jun-26,Development,1350000,103
+PH,Pony Hills,Jul-25,Development,104167,103
+PH,Pony Hills,Aug-25,Development,104167,103
+PH,Pony Hills,Sep-25,Development,104167,103
+PH,Pony Hills,Oct-25,Development,104167,103
+PH,Pony Hills,Nov-25,Development,104167,103
+PH,Pony Hills,Dec-25,Development,104167,103
+PH,Pony Hills,Jan-26,Development,104167,103
+PH,Pony Hills,Feb-26,Development,104167,103
+PH,Pony Hills,Mar-26,Development,104167,103
+PH,Pony Hills,Apr-26,Development,104167,103
+PH,Pony Hills,May-26,Development,104167,103
+PH,Pony Hills,Jun-26,Development,104167,103
+SA,Saltbush,Jul-25,Development,433333,103
+SA,Saltbush,Aug-25,Development,433333,103
+SA,Saltbush,Sep-25,Development,433333,103
+SA,Saltbush,Oct-25,Development,433333,103
+SA,Saltbush,Nov-25,Development,433333,103
+SA,Saltbush,Dec-25,Development,433333,103
+SA,Saltbush,Jan-26,Development,433333,103
+SA,Saltbush,Feb-26,Development,433333,103
+SA,Saltbush,Mar-26,Development,433333,103
+SA,Saltbush,Apr-26,Development,433333,103
+SA,Saltbush,May-26,Development,433333,103
+SA,Saltbush,Jun-26,Development,433333,103
+SR,Shovel-ready asset,Apr-26,Construction,1377500,103
+SR,Shovel-ready asset,May-26,Construction,1377500,103
+SR,Shovel-ready asset,Jun-26,Construction,1377500,103
+TH,Theodore,Jul-25,Development,77512.8,103
+TH,Theodore,Aug-25,Development,77512.8,103
+TH,Theodore,Sep-25,Development,77512.8,103
+TH,Theodore,Oct-25,Development,77512.8,103
+TH,Theodore,Nov-25,Development,77512.8,103
+TH,Theodore,Dec-25,Development,77512.8,103
+TH,Theodore,Jan-26,Development,77512.8,103
+TH,Theodore,Feb-26,Development,77512.8,103
+TH,Theodore,Mar-26,Development,77512.8,103
+TH,Theodore,Apr-26,Development,77512.8,103
+TH,Theodore,May-26,Development,77512.8,103
+TH,Theodore,Jun-26,Development,77512.8,103
