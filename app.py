@@ -4,138 +4,58 @@ from flask import Flask, request, jsonify, render_template
 from openai import OpenAI
 
 app = Flask(__name__)
+
+# Load CSV datasets
+cost_df = pd.read_csv("data/cost.csv")  # assuming schema is unchanged
+harvest_df = pd.read_csv("data/harvest_summary.csv")  # AssetID, Asset, Month, Team, Hours
+actual_df = pd.read_csv("data/xero_actual_revenue.csv")  # AssetID, Asset, Month, Phase, Actual, Rate
+budget_df = pd.read_csv("data/xero_budget_revenue.csv")  # AssetID, Asset, Month, Phase, Budget, Rate
+
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-# -------------------------------------------------------
-# 1. LOAD YOUR CSV DATA
-# -------------------------------------------------------
-cost_df = pd.read_csv("data/cost.csv")
-harvest_df = pd.read_csv("data/harvest_summary.csv")
-actual_df = pd.read_csv("data/xero_actual_revenue.csv")
-budget_df = pd.read_csv("data/xero_budget_revenue.csv")
-
-# -------------------------------------------------------
-# 2. PREP MERGED DATA FOR VARIANCE ANALYSIS
-# -------------------------------------------------------
-merged_df = pd.merge(
-    actual_df,
-    budget_df,
-    on=["AssetID", "Month"],
-    how="outer",
-    suffixes=("_Actual", "_Budget")
-)
-
-merged_df["Variance"] = merged_df["Revenue_Actual"].fillna(0) - merged_df["Revenue_Budget"].fillna(0)
-
-
-# -------------------------------------------------------
-# 3. HELPER FUNCTION: FILTER RELEVANT ROWS
-# -------------------------------------------------------
-def filter_context(prompt):
+def filter_context(user_prompt):
     """
-    Returns only the relevant rows among cost_df, harvest_df,
-    actual_df, budget_df, merged_df based on keywords found in the prompt.
+    Identify relevant rows across all datasets based on keywords in the question.
+    Returns a combined text block the model can safely reference.
     """
-
-    keywords = prompt.lower()
-
-    context_parts = []
-
-    def df_to_context(df, df_name):
-        if df.empty:
-            return f"[{df_name}] — NO MATCHING ROWS\n"
-        return f"[{df_name}]\n" + df.to_string(index=False) + "\n\n"
-
-    # Filter by AssetID or Month if mentioned
-    def filter_df(df):
-        filtered = df.copy()
-
-        # Check ID
+    keywords = []
+    for df in [cost_df, harvest_df, actual_df, budget_df]:
         for col in df.columns:
-            if col.lower() in ["assetid", "projectid"]:
-                for word in keywords.split():
-                    if word.isdigit():
-                        filtered = filtered[filtered[col] == int(word)]
+            for val in df[col].dropna().unique():
+                if isinstance(val, str) and val.lower() in user_prompt.lower():
+                    keywords.append(val)
 
-        # Check month (e.g., 2024-07, July, 07/24)
-        for col in df.columns:
-            if "month" in col.lower():
-                for word in keywords.split():
-                    if word in str(df[col].values):
-                        filtered = filtered[filtered[col].astype(str).str.contains(word)]
+    # If no keywords identified → include all rows (fallback)
+    if not keywords:
+        cost_context = cost_df.to_string(index=False)
+        harvest_context = harvest_df.to_string(index=False)
+        actual_context = actual_df.to_string(index=False)
+        budget_context = budget_df.to_string(index=False)
+    else:
+        def match_rows(df):
+            mask = False
+            for col in df.columns:
+                for kw in keywords:
+                    mask = mask | df[col].astype(str).str.contains(kw, case=False, na=False)
+            filtered = df[mask]
+            return filtered.to_string(index=False) if not filtered.empty else "(no matching rows)"
 
-        return filtered
+        cost_context = match_rows(cost_df)
+        harvest_context = match_rows(harvest_df)
+        actual_context = match_rows(actual_df)
+        budget_context = match_rows(budget_df)
 
-    # Detect which datasets the question should use
-    if "cost" in keywords:
-        context_parts.append(df_to_context(filter_df(cost_df), "COST DATA"))
+    # Build text block
+    context_text = (
+        "\n--- COST DATA ---\n" + cost_context +
+        "\n\n--- HARVEST (Hours Logged) ---\n" + harvest_context +
+        "\n\n--- XERO ACTUAL REVENUE ---\n" + actual_context +
+        "\n\n--- XERO BUDGET REVENUE ---\n" + budget_context
+    )
 
-    if "hour" in keywords or "harvest" in keywords:
-        context_parts.append(df_to_context(filter_df(harvest_df), "HOURS (HARVEST)"))
-
-    if "actual" in keywords:
-        context_parts.append(df_to_context(filter_df(actual_df), "ACTUAL REVENUE"))
-
-    if "budget" in keywords:
-        context_parts.append(df_to_context(filter_df(budget_df), "BUDGET REVENUE"))
-
-    if "variance" in keywords or "compare" in keywords:
-        context_parts.append(df_to_context(filter_df(merged_df), "ACTUAL vs BUDGET (MERGED)"))
-
-    # If no keyword matched, include minimal context
-    if not context_parts:
-        context_parts.append("[No matching dataset — include direct question instead]\n")
-
-    return "\n".join(context_parts)
+    return context_text
 
 
-# -------------------------------------------------------
-# 4. SYSTEM PROMPT FOR THE FINANCIAL ASSISTANT
-# -------------------------------------------------------
-def build_system_prompt(context_text):
-
-    return f"""
-You are OSCAR Financial Assistant — a highly reliable AI that analyses
-revenue, costs, hours, and variances for renewable energy assets/projects.
-
-Your ONLY source of truth is the dataset provided in the context below.
-Never make assumptions. Follow these rules strictly:
-
-1. Use ONLY the data in the context to calculate revenue, hours, costs, or variance.
-2. If a number cannot be computed from the available rows, respond:
-   'The data does not contain enough information to answer this.'
-3. When answering, always cite the specific rows you used from the context.
-4. Provide clear, concise financial explanations.
-5. If the question refers to a month, asset, or project not in the context,
-   explain that the dataset doesn't contain that entry.
-6. Do NOT hallucinate, estimate, or infer missing values.
-
----------------- DATA YOU HAVE ACCESS TO ----------------
-
-You have the following datasets:
-- cost_df: overhead and cost data
-- harvest_df: logged timesheet hours
-- actual_df: actual revenue from Xero
-- budget_df: planned/budgeted revenue
-- merged_df: actual vs budget revenue with variance
-
-Your role is to help the user understand:
-- Actual revenue
-- Budget revenue
-- Variance
-- Hours logged
-- Cost breakdown
-- Asset/project performance
-
-------------------- CONTEXT BELOW -----------------------
-{context_text}
----------------------------------------------------------
-"""
-
-
-# -------------------------------------------------------
-# 5. ROUTES
-# -------------------------------------------------------
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -143,27 +63,48 @@ def index():
 
 @app.route("/ask", methods=["POST"])
 def ask():
-    user_input = request.get_json().get("prompt", "")
+    data = request.get_json()
+    prompt = data.get("prompt", "")
 
-    if not user_input:
+    if not prompt:
         return jsonify({"error": "Prompt is empty"}), 400
 
-    # Generate contextual subset of data
-    context_text = filter_context(user_input)
+    # Build contextual data for the user question
+    context_text = filter_context(prompt)
 
-    # Build system message
-    system_prompt = build_system_prompt(context_text)
+    system_message = (
+        "You are OSCAR Financial Assistant — a highly reliable AI that analyses "
+        "revenue, costs, hours, and variances for renewable energy assets/projects.\n\n"
+        "Your ONLY source of truth is the dataset provided in the context below. "
+        "You must follow these rules:\n\n"
+        "1. Use ONLY the rows in the data context to calculate revenue, costs, hours, or variance.\n"
+        "2. If a number cannot be computed from available rows, reply:\n"
+        "   'The data does not contain enough information to answer this.'\n"
+        "3. Always cite the row(s) you used from the context.\n"
+        "4. Provide clear financial explanations.\n"
+        "5. If the question asks about an asset/project/month not in the context, "
+        "explain that the dataset doesn't contain that entry.\n"
+        "6. NEVER hallucinate or infer missing values.\n"
+        "7. If asked to compare actual vs budget revenue, use AssetID to match entries "
+        "between xero_actual_revenue and xero_budget_revenue.\n\n"
+        "Your job is to help the user understand:\n"
+        "- Actual revenue (Xero)\n"
+        "- Budget revenue\n"
+        "- Logged hours (Harvest)\n"
+        "- Cost/overheads\n"
+        "- Variances & commentary\n\n"
+        "----- DATA CONTEXT (rows retrieved based on user question) -----\n"
+        + context_text
+    )
 
-    # Call OpenAI
     try:
         response = client.chat.completions.create(
             model="gpt-4.1-mini",
             messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": prompt},
             ],
         )
-
         answer = response.choices[0].message.content
         return jsonify({"answer": answer})
 
@@ -171,9 +112,5 @@ def ask():
         return jsonify({"error": str(e)}), 500
 
 
-# -------------------------------------------------------
-# 6. FLASK SERVER
-# -------------------------------------------------------
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))

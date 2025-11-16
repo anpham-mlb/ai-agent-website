@@ -1,33 +1,33 @@
 ﻿AssetID,Asset,Month,Phase,Actual,Rate
-AR,Ardandra,Jul-25,Development,419556.015,
-AR,Ardandra,Aug-25,Development,215975.25,
-AR,Ardandra,Sep-25,Development,317765.565,
-AR,Ardandra,Oct-25,Development,317765.61,
-BS,Blackstone,Jul-25,Development,856627.225,
-BS,Blackstone,Aug-25,Development,-68282.225,
-BS,Blackstone,Sep-25,Development,394172.5,
-BS,Blackstone,Oct-25,Development,394172.5,
-BC,Blind Creek,Jul-25,Development,2280000,
-BC,Blind Creek,Aug-25,Development,690000,
-BC,Blind Creek,Sep-25,Development,585000,
-BC,Blind Creek,Oct-25,Development,0,
-CO,Coleambally,Oct-25,Development,4854151.64,
-DP,Darlington Point,Jul-25,Operation,646560.49,
-DP,Darlington Point,Aug-25,Operation,646560.49,
-DP,Darlington Point,Sep-25,Operation,646560.49,
-DP,Darlington Point,Oct-25,Operation,646560.49,
-DL,Dulacca,Jul-25,Operation,568293,
-DL,Dulacca,Aug-25,Operation,568293,
-DL,Dulacca,Sep-25,Operation,568293,
-DL,Dulacca,Oct-25,Operation,568293,
-FH,Fulham,Jul-25,Construction,311346.525,
-FH,Fulham,Aug-25,Construction,311346.525,
-FH,Fulham,Sep-25,Construction,311346.525,
-FH,Fulham,Oct-25,Construction,311346.525,
-GF,Giffard,Jul-25,Development,23325,
-GF,Giffard,Aug-25,Development,36939.6,
-GF,Giffard,Sep-25,Development,30132.3,
-GF,Giffard,Oct-25,Development,30132.3,
-SA,Saltbush,Aug-25,Development,648367.46,
-SA,Saltbush,Sep-25,Development,324183.73,
-SA,Saltbush,Oct-25,Development,324183.73,
+AR,Ardandra,Jul-25,Development,419556.015,103
+AR,Ardandra,Aug-25,Development,215975.25,103
+AR,Ardandra,Sep-25,Development,317765.565,103
+AR,Ardandra,Oct-25,Development,317765.61,103
+BS,Blackstone,Jul-25,Development,856627.225,103
+BS,Blackstone,Aug-25,Development,-68282.225,103
+BS,Blackstone,Sep-25,Development,394172.5,103
+BS,Blackstone,Oct-25,Development,394172.5,103
+BC,Blind Creek,Jul-25,Development,2280000,103
+BC,Blind Creek,Aug-25,Development,690000,103
+BC,Blind Creek,Sep-25,Development,585000,103
+BC,Blind Creek,Oct-25,Development,0,103
+CO,Coleambally,Oct-25,Development,4854151.64,103
+DP,Darlington Point,Jul-25,Operation,646560.49,103
+DP,Darlington Point,Aug-25,Operation,646560.49,103
+DP,Darlington Point,Sep-25,Operation,646560.49,103
+DP,Darlington Point,Oct-25,Operation,646560.49,103
+DL,Dulacca,Jul-25,Operation,568293,103
+DL,Dulacca,Aug-25,Operation,568293,103
+DL,Dulacca,Sep-25,Operation,568293,103
+DL,Dulacca,Oct-25,Operation,568293,103
+FH,Fulham,Jul-25,Construction,311346.525,103
+FH,Fulham,Aug-25,Construction,311346.525,103
+FH,Fulham,Sep-25,Construction,311346.525,103
+FH,Fulham,Oct-25,Construction,311346.525,103
+GF,Giffard,Jul-25,Development,23325,103
+GF,Giffard,Aug-25,Development,36939.6,103
+GF,Giffard,Sep-25,Development,30132.3,103
+GF,Giffard,Oct-25,Development,30132.3,103
+SA,Saltbush,Aug-25,Development,648367.46,103
+SA,Saltbush,Sep-25,Development,324183.73,103
+SA,Saltbush,Oct-25,Development,324183.73,103
