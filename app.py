@@ -9,10 +9,10 @@ client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 # -------------------------------------------------------
 # 1. LOAD YOUR CSV DATA
 # -------------------------------------------------------
-cost_df = pd.read_csv("cost.csv")
-harvest_df = pd.read_csv("harvest_summary.csv")
-actual_df = pd.read_csv("xero_actual_revenue.csv")
-budget_df = pd.read_csv("xero_budget_revenue.csv")
+cost_df = pd.read_csv("data/cost.csv")
+harvest_df = pd.read_csv("data/harvest_summary.csv")
+actual_df = pd.read_csv("data/xero_actual_revenue.csv")
+budget_df = pd.read_csv("data/xero_budget_revenue.csv")
 
 # -------------------------------------------------------
 # 2. PREP MERGED DATA FOR VARIANCE ANALYSIS
